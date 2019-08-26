@@ -76,6 +76,12 @@ variable "secrets" {
   default     = []
 }
 
+variable "docker_labels" {
+  type        = "map"
+  description = "The configuration options to send to the `docker_labels`"
+  default     = {}
+}
+
 variable "readonly_root_filesystem" {
   type        = "string"
   description = "Determines whether a container is given read-only access to its root filesystem. Due to how Terraform type casts booleans in json it is required to double quote this value"
